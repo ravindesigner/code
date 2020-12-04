@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+
+<html>
+
+<title>Arrow Graphic</title>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<link rel="shortcut icon" href="logo.png">
+
+<style>
+
+    
+
+h1,h2,h3,h4,h5,h6 {
+
+    font-family: "Poppins", sans-serif;
+
+    text-align: right;
+
+}
+
+.menu {
+
+    text-align: right;
+
+}
+
+body {
+
+    font-size:16px;
+
+}
+
+span {
+
+   text-align: left;
+
+}
+
+.w3-half img {
+
+    margin: auto;
+
+    margin-bottom: 15px;
+
+    display: block;
+
+    width: 80%;
+
+    cursor:pointer;
+
+    transition: 0.3s;
+
+}
+
+.w3-half img:hover {
+
+    width: 100%;   
+
+}
+
+.logo {
+
+    width: 50%;
+
+    margin: auto;
+
+    display: block;
+
+}
+
+.about {
+
+	  font-size: 13px;}
+
+.work {
+
+			 font-size: 17px;
+
+}
+
+</style>
+
+<body>
+
+<!-- Sidebar/menu -->
+
+<nav class="w3-sidebar w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold; background: linear-gradient(145deg, #2C91FF, #034DE6);" id="mySidebar"><br>
+
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft w3-text-white" style="width:100%;font-size:22px">مینو دابخە</a>
+
+  <div class="w3-container">
+
+    <h2 class="w3-text-white w3-padding-64"><b>Arrow Graphic</b></h2>
+
+  </div>
+
+  <div class="w3-bar-block">
+
+    <a href="#" onclick="w3_close()" class="w3-text-white w3-bar-item w3-button w3-hover-white">سەرەتا</a>
+
+    <a href="#ourworks" onclick="w3_close()" class="w3-text-white w3-bar-item w3-button w3-hover-white">کارەکانمان</a>
+
+    <a href="#services" onclick="w3_close()" class="w3-text-white w3-bar-item w3-button w3-hover-white">خزمەتگوزارییەکان</a> 
+
+    <a href="#designers" onclick="w3_close()" class="w3-text-white w3-bar-item w3-button w3-hover-white">دیزاینەرەکان</a>
+
+    <a href="#contact" onclick="w3_close()" class="w3-text-white w3-bar-item w3-button w3-hover-white">پەیوەندی</a>
+
+  </div>
+
+</nav>
+
+<!-- Top menu on small screens -->
+
+<header style="background: linear-gradient(145deg, #2C91FF, #034DE6);" class="w3-container w3-top w3-hide-large w3-xlarge w3-padding">
+
+<span class="w3-text-white">Arrow Graphic</span>
+
+  <a href="javascript:void(0)" class="menu w3-text-white w3-button w3-margin-right" style="font-size: 30px" onclick="w3_open()">≡</a>
+
+</header>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+
+<div class="w3-main" style="margin-left:340px;margin-right:40px">
+
+  <!-- Header -->
+
+  <div class="w3-container" style="margin-top:80px" id="ourworks">
+
+    
+
+    <img class="logo" src="logo.png" alt="Logo">
+
+    
+
+    <br>
+
+    
+
+    <h3 align="right" style="color: #176FF2"><b>کارەکانمان :</b></h3>
+
+    <hr style="width:100%; border: 2px solid #176FF2;" class="w3-round">
+
+  </div>
+
+  
+
+  <!-- Photo grid (modal) -->
+
+  <div class="w3-row-padding">
+
+    <div class="w3-half">
+
+      <img class="workss" src="https://www.w3schools.com/w3images/kitchenconcrete.jpg" onclick="onClick(this)" alt="Concrete meets bricks">
+
+      <img src="https://www.w3schools.com/w3images/livingroom.jpg" onclick="onClick(this)" alt="Light, white and tight scandinavian design">
+
+      <img src="https://www.w3schools.com/w3images/diningroom.jpg" onclick="onClick(this)" alt="White walls with designer chairs">
+
+    </div>
+
+    <div class="w3-half">
+
+      <img src="https://www.w3schools.com/w3images/atrium.jpg" onclick="onClick(this)" alt="Windows for the atrium">
+
+      <img src="https://www.w3schools.com/w3images/bedroom.jpg" onclick="onClick(this)" alt="Bedroom and office in one space">
+
+      <img src="https://www.w3schools.com/w3images/livingroom2.jpg" onclick="onClick(this)" alt="Scandinavian design">
+
+    </div>
+
+  </div>
+
+  <!-- Modal for full size images on click-->
+
+  <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+
+    <span class="w3-button w3-black w3-xxlarge w3-display-topright">×</span>
+
+    <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+
+      <img id="img01" class="w3-image">
+
+      <p id="caption"></p>
+
+    </div>
+
+  </div>
+
+  <!-- Services -->
+
+  <div class="w3-container" id="services" style="margin-top:75px">
+
+    <h3 style="color: #176FF2"><b>خزمەتگوزارییەکان :</b></h3>
+
+    <hr style="width:100%; border: 2px solid #176FF2;" class="w3-round">
+
+    <p>We are a interior design service that focus on what's best for your home and what's best for you!</p>
+
+    <p>Some text about our services - what we do and what we offer. We are lorem ipsum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+
+    dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor
+
+    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+
+    </p>
+
+  </div>
+
+  
+
+  <!-- Designers -->
+
+  <div class="w3-container" id="designers" style="margin-top:75px">
+
+    <h3 style="color: #176FF2"><b>دیزاینەر :</b></h3>
+
+    <hr style="width:100%; border: 2px solid #176FF2;" class="w3-round">
+
+    <p>The best team in the world.</p>
+
+    <p>We are lorem ipsum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+
+    dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor
+
+    incididunt ut labore et quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+
+    </p>
+
+    <p>دیزاینەرەکانی ئێمە :</p>
+
+  </div>
+
+  <!-- The Team -->
+
+  <div class="w3-row-padding">
+
+    <div class="w3-col m4 w3-margin-bottom">
+
+      <div class="w3-light-grey">
+
+        <img src="https://1.bp.blogspot.com/-055vyKWhMeI/X8EwB-heLyI/AAAAAAAACpk/EhmQbUf_r3gz418t9DAuswzc3y7AXcfNQCLcBGAsYHQ/s600/20201102_144254.png" alt="Ravin" style="width:100%">
+
+        <div class="w3-container">
+
+          <h3 align="right">ڕاڤین ئاودێر</h3>
+
+          <p align="right" class="w3-opacity work">گرافیک دیزاینەر - گەشەپێدەری ماڵپەڕ</p>  
+
+        <p  align="right" class="about">ناوم ڕاڤین ئاودێرە. تەمەنم ١٦ ساڵە. دانیشتووی سلێمانیم. من گرافیک دیزاینەر و گەشەپێدەری وێبسایتم.</p>
+
+        </div>
+
+       </div>
+
+      </div>
+
+   
+
+    <div class="w3-col m4 w3-margin-bottom">
+
+      <div class="w3-light-grey">
+
+        <img class="profilephoto" src="https://1.bp.blogspot.com/-a6RXvMo8z8Y/X8PGNOC_0XI/AAAAAAAACpw/sHkzunc2fbQvoldPYNlq-JbIqdLSRIhUgCLcBGAsYHQ/s720/FB_IMG_1606665523443.jpg" alt="Zakarya" style="width:100%">
+
+        <div class="w3-container">
+
+          <h3 align="right">زەکەریا یەحیا</h3>
+
+          <p align="right" class="w3-opacity work">گرافیک دیزاینەر</p>  
+
+        <p  align="right" class="about">ناوم زەکەریا یەحیایە. تەمەنم ١٨ ساڵە. دانیشتووی چەمچەماڵ-سلێمانیم. گرافیک دیزاینەرم.</p>
+
+       </div>
+
+      </div>
+
+    </div>
+
+    <div class="w3-col m4 w3-margin-bottom">
+
+     <div class="w3-light-grey">
+
+        <img class="profilephoto" src="https://1.bp.blogspot.com/-JoT6USDpbIc/X8PGNZ2z6bI/AAAAAAAACp0/lUfpxqQyRJQieEEZhTHheec0Gw9VYuw0gCLcBGAsYHQ/s720/20201129_190000.png" alt="Rasty" style="width:100%">
+
+        <div class="w3-container">
+
+          <h3>Rasty Jawhar</h3>
+
+          <p class="w3-opacity work">Graphic Designer</p>
+
+          <p class="about">My name is Rasty Jawhar. I am 18 Years Old. I Live In Sulaymaniyah. I am Graphic Designer.</p>
+
+        </div>
+
+      </div>
+
+<!-- W3.CSS Container -->
+
+<footer class="w3-container w3-light-grey w3-center w3-margin-top">
+
+		
+
+		<br>
+
+			
+
+  <p>Find us on social media.</p>
+
+  
+
+  
+
+  <a href="https://www.facebook.com/arrow.graphic.12/"><i style=" font-size: 30px;
+
+  background: -webkit-linear-gradient(#2C91FF, #034DE6);
+
+  -webkit-background-clip: text;
+
+  -webkit-text-fill-color: transparent;" class="fa fa-facebook-square w3-hover-opacity"></i></a>
+
+  
+
+  
+
+ <a href="https://www.facebook.com/arrow.graphic.1"><i style="font-size: 30px;     background: -webkit-linear-gradient(#034DE6, #2C91FF);
+
+  -webkit-background-clip: text;
+
+  -webkit-text-fill-color: transparent;" class="fa fa-facebook-square w3-hover-opacity"></i></a>
+
+   
+
+<div class="w3-light-grey w3-container w3-padding-32" style="text-align: center;"><p class="w3-center">Powered by <a href="https://www.facebook.com/ravin.a.faiq.1" title="Ravin Awder" style="text-decoration: none; color: #176FF2;" target="_blank" class="w3-hover-opacity">Ravin Awder</a></p></div>
+
+<!-- script -->
+
+<script>
+
+// Script to open and close sidebar
+
+function w3_open() {
+
+  document.getElementById("mySidebar").style.display = "block";
+
+  document.getElementById("myOverlay").style.display = "block";
+
+}
+
+ 
+
+function w3_close() {
+
+  document.getElementById("mySidebar").style.display = "none";
+
+  document.getElementById("myOverlay").style.display = "none";
+
+}
+
+// Modal Image Gallery
+
+function onClick(element) {
+
+  document.getElementById("img01").src = element.src;
+
+  document.getElementById("modal01").style.display = "block";
+
+  var captionText = document.getElementById("caption");
+
+  captionText.innerHTML = element.alt;
+
+}
+
+</script>
+
+</body>
+
+</html>
